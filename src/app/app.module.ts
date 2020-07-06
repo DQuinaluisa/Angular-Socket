@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import  { HttpClientModule } from '@angular/common/http';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //import { DocumentosComponent } from './crear-doc/documentos/documentos.component';
@@ -11,6 +14,7 @@ import { SocketJwtService } from './servicios/socket-jwt.service';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { CrearDocComponent } from './crear-doc/crear-doc.component';
+
 
 //const config: SocketIoConfig = {url: 'http://localhost:3500', options: {} };
 
@@ -28,7 +32,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FormsModule,
    // SocketIoModule.forRoot(config)
    SocketIoModule,
-   BrowserAnimationsModule
+   BrowserAnimationsModule,
+   HttpClientModule
+   
 
   ],
   providers: [SocketJwtService],
